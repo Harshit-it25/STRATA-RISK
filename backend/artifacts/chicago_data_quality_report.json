@@ -1,0 +1,53 @@
+{
+  "dataset_name": "Official Chicago Crimes (ijzp-q8t2)",
+  "proxy_dataset": true,
+  "provenance": "City of Chicago Open Data Portal via Socrata Open Data API",
+  "raw_record_count": 25000,
+  "processed_record_count": 24815,
+  "excluded_record_count": 185,
+  "missing_coordinates_count": 184,
+  "out_of_bounds_count": 0,
+  "duplicate_records_count": 1,
+  "unmapped_districts_count": 0,
+  "date_range": {
+    "start": "2023-01-01 00:00:00",
+    "end": "2023-05-23 19:06:00",
+    "duration_days": 142
+  },
+  "geographic_extent": {
+    "lat_min": 41.7935,
+    "lat_max": 41.9696,
+    "lon_min": -87.7131,
+    "lon_max": -87.6047
+  },
+  "top_incident_types": {
+    "theft": 7611,
+    "battery": 3423,
+    "motor vehicle theft": 2380,
+    "criminal damage": 2363,
+    "deceptive practice": 2324,
+    "assault": 1778,
+    "other offense": 1167,
+    "robbery": 844,
+    "burglary": 677,
+    "criminal trespass": 677
+  },
+  "sector_distribution": {
+    "zone-07": 5894,
+    "zone-04": 5125,
+    "zone-02": 4899,
+    "zone-09": 4696,
+    "zone-12": 4201
+  },
+  "zone_distribution": {
+    "riverside": 7190,
+    "east": 7008,
+    "central": 5453,
+    "market": 5164
+  },
+  "warnings": [
+    "184 records excluded due to missing spatial coordinates",
+    "0 records excluded outside Chicago bounding box",
+    "Chicago crime data is an empirical proxy benchmark and does not reflect another city's local conditions"
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "validation_evaluations": {
+    "G. Naive Base Rate Baseline": {
+      "brier": 0.2133,
+      "roc_auc": 0.5,
+      "pr_auc": 0.6918,
+      "ece": 0.0097,
+      "op_precision_at_4": 0.6758,
+      "op_precision_std": 0.2507,
+      "op_recall_at_4": 0.1952
+    },
+    "F. Temporal Cyclical Baseline": {
+      "brier": 0.1987,
+      "roc_auc": 0.6553,
+      "pr_auc": 0.791,
+      "ece": 0.0194,
+      "op_precision_at_4": 0.7383,
+      "op_precision_std": 0.2438,
+      "op_recall_at_4": 0.2138
+    },
+    "E. Historical Spatial Baseline": {
+      "brier": 0.1995,
+      "roc_auc": 0.6574,
+      "pr_auc": 0.7918,
+      "ece": 0.0165,
+      "op_precision_at_4": 0.8496,
+      "op_precision_std": 0.2104,
+      "op_recall_at_4": 0.251
+    },
+    "A. Base CatBoost (Raw)": {
+      "brier": 0.1831,
+      "roc_auc": 0.7326,
+      "pr_auc": 0.8503,
+      "ece": 0.0184,
+      "op_precision_at_4": 0.8555,
+      "op_precision_std": 0.2016,
+      "op_recall_at_4": 0.253
+    },
+    "B. CatBoost + Temporal (Raw)": {
+      "brier": 0.184,
+      "roc_auc": 0.7295,
+      "pr_auc": 0.8493,
+      "ece": 0.0165,
+      "op_precision_at_4": 0.834,
+      "op_precision_std": 0.2103,
+      "op_recall_at_4": 0.2462
+    },
+    "C. CatBoost + Spatial (Raw)": {
+      "brier": 0.1832,
+      "roc_auc": 0.7327,
+      "pr_auc": 0.8522,
+      "ece": 0.0208,
+      "op_precision_at_4": 0.8457,
+      "op_precision_std": 0.2052,
+      "op_recall_at_4": 0.2493
+    },
+    "D. CatBoost + Full Enhanced (Raw)": {
+      "brier": 0.1839,
+      "roc_auc": 0.7301,
+      "pr_auc": 0.8502,
+      "ece": 0.0158,
+      "op_precision_at_4": 0.8477,
+      "op_precision_std": 0.2102,
+      "op_recall_at_4": 0.2501
+    },
+    "I. Spatio-Temporal Blend (alpha=0.70)": {
+      "brier": 0.1852,
+      "roc_auc": 0.7278,
+      "pr_auc": 0.8487,
+      "ece": 0.0304,
+      "op_precision_at_4": 0.8516,
+      "op_precision_std": 0.2012,
+      "op_recall_at_4": 0.2513
+    },
+    "D-Cal. CatBoost Full (Isotonic)": {
+      "brier": 0.1811,
+      "roc_auc": 0.7355,
+      "pr_auc": 0.8462,
+      "ece": 0.0,
+      "op_precision_at_4": 0.8574,
+      "op_precision_std": 0.1969,
+      "op_recall_at_4": 0.2534
+    }
+  },
+  "test_evaluations": {
+    "Historical Spatial Baseline": {
+      "brier": 0.1926,
+      "roc_auc": 0.67,
+      "pr_auc": 0.8032,
+      "ece": 0.0228,
+      "op_precision_at_4": 0.8474,
+      "op_precision_std": 0.1989,
+      "op_recall_at_4": 0.2438
+    },
+    "Temporal Cyclical Baseline": {
+      "brier": 0.1949,
+      "roc_auc": 0.6535,
+      "pr_auc": 0.8021,
+      "ece": 0.0269,
+      "op_precision_at_4": 0.7558,
+      "op_precision_std": 0.2087,
+      "op_recall_at_4": 0.218
+    },
+    "Original CatBoost (17 Feats, Cal)": {
+      "brier": 0.1815,
+      "roc_auc": 0.7274,
+      "pr_auc": 0.85,
+      "ece": 0.0266,
+      "op_precision_at_4": 0.8314,
+      "op_precision_std": 0.2121,
+      "op_recall_at_4": 0.2383
+    },
+    "Enhanced CatBoost (Full Feats, Cal)": {
+      "brier": 0.1812,
+      "roc_auc": 0.7271,
+      "pr_auc": 0.8485,
+      "ece": 0.0185,
+      "op_precision_at_4": 0.827,
+      "op_precision_std": 0.2111,
+      "op_recall_at_4": 0.2364
+    },
+    "Spatio-Temporal Hybrid Ensemble (Cal)": {
+      "brier": 0.1812,
+      "roc_auc": 0.7262,
+      "pr_auc": 0.8442,
+      "ece": 0.0163,
+      "op_precision_at_4": 0.8328,
+      "op_precision_std": 0.2054,
+      "op_recall_at_4": 0.2394
+    }
+  },
+  "best_blend_alpha": 0.7000000000000001,
+  "selected_model": "Spatio-Temporal Hybrid Ensemble (Enhanced CatBoost + Spatial Prior)",
+  "features": [
+    "sector_id",
+    "zone_key",
+    "hour_of_day",
+    "day_of_week",
+    "is_weekend",
+    "sin_hour",
+    "cos_hour",
+    "sin_day",
+    "cos_day",
+    "lag_1_count",
+    "lag_2_count",
+    "lag_6_count",
+    "lag_42_count",
+    "rolling_24h_sum",
+    "rolling_7d_mean",
+    "sector_other_zones_count",
+    "empirical_cell_rate",
+    "lag_3_count",
+    "lag_18_count",
+    "rolling_48h_sum",
+    "rolling_28d_mean",
+    "ewma_24h",
+    "activity_surge_ratio",
+    "activity_surge_diff",
+    "incident_acceleration",
+    "is_night",
+    "weekend_night",
+    "city_total_count",
+    "sector_volume_share"
+  ]
+}

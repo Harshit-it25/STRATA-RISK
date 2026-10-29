@@ -1,0 +1,10 @@
+{
+  "crl_version": "1.0",
+  "crl_sequence": 1,
+  "issuer_id": "pune_city_police_cop",
+  "description": "Strata Risk Authorized Certificate Revocation List for Pune City Police Commissionerate",
+  "issued_at": "2026-01-01T00:00:00Z",
+  "expires_at": "2030-12-31T23:59:59Z",
+  "revoked_authorizations": [],
+  "integrity_comment": "Persistent authoritative CRL for multi-worker synchronization and process restart survival."
+}

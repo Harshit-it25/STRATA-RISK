@@ -1,0 +1,115 @@
+{
+  "dataset_path": "data/processed_chicago_crimes.csv",
+  "n_holdout": 3440,
+  "positive_count": 2425,
+  "test_prevalence": 0.7049418604651163,
+  "global_metrics": {
+    "Naive Base Rate Baseline": {
+      "brier": 0.2085,
+      "roc_auc": 0.5,
+      "pr_auc": 0.7049,
+      "log_loss": 0.6078,
+      "ece": 0.0228,
+      "cal_slope": 1.0,
+      "cal_intercept": 0.0,
+      "precision_top_20pct_pooled": 0.6439,
+      "recall_top_20pct_pooled": 0.1827
+    },
+    "Temporal Cyclical Baseline": {
+      "brier": 0.1949,
+      "roc_auc": 0.6535,
+      "pr_auc": 0.8021,
+      "log_loss": 0.5749,
+      "ece": 0.0269,
+      "cal_slope": 0.9133,
+      "cal_intercept": 0.1754,
+      "precision_top_20pct_pooled": 0.859,
+      "recall_top_20pct_pooled": 0.2437
+    },
+    "Historical Spatial Baseline": {
+      "brier": 0.1926,
+      "roc_auc": 0.67,
+      "pr_auc": 0.8032,
+      "log_loss": 0.5701,
+      "ece": 0.0228,
+      "cal_slope": 1.0234,
+      "cal_intercept": 0.0998,
+      "precision_top_20pct_pooled": 0.8474,
+      "recall_top_20pct_pooled": 0.2404
+    },
+    "CatBoost (Uncalibrated)": {
+      "brier": 0.1805,
+      "roc_auc": 0.7302,
+      "pr_auc": 0.8578,
+      "log_loss": 0.5372,
+      "ece": 0.0194,
+      "cal_slope": 0.9887,
+      "cal_intercept": 0.1042,
+      "precision_top_20pct_pooled": 0.9157,
+      "recall_top_20pct_pooled": 0.2598
+    },
+    "CatBoost (Isotonic Calibrated)": {
+      "brier": 0.1807,
+      "roc_auc": 0.7282,
+      "pr_auc": 0.8482,
+      "log_loss": 0.5649,
+      "ece": 0.0195,
+      "cal_slope": 0.8357,
+      "cal_intercept": 0.1839,
+      "precision_top_20pct_pooled": 0.9084,
+      "recall_top_20pct_pooled": 0.2577
+    }
+  },
+  "operational_shift_metrics": {
+    "Naive Base Rate Baseline": {
+      "operational_precision_mean": 0.6759,
+      "operational_precision_std": 0.2722,
+      "ci_95_empirical": [
+        0.0688,
+        1.0
+      ],
+      "operational_recall_mean": 0.1879,
+      "lift_over_base_rate": -0.0291
+    },
+    "Temporal Cyclical Baseline": {
+      "operational_precision_mean": 0.7558,
+      "operational_precision_std": 0.2087,
+      "ci_95_empirical": [
+        0.25,
+        1.0
+      ],
+      "operational_recall_mean": 0.218,
+      "lift_over_base_rate": 0.0509
+    },
+    "Historical Spatial Baseline": {
+      "operational_precision_mean": 0.8474,
+      "operational_precision_std": 0.1989,
+      "ci_95_empirical": [
+        0.5,
+        1.0
+      ],
+      "operational_recall_mean": 0.2438,
+      "lift_over_base_rate": 0.1424
+    },
+    "CatBoost (Uncalibrated)": {
+      "operational_precision_mean": 0.8372,
+      "operational_precision_std": 0.1991,
+      "ci_95_empirical": [
+        0.3188,
+        1.0
+      ],
+      "operational_recall_mean": 0.2406,
+      "lift_over_base_rate": 0.1323
+    },
+    "CatBoost (Isotonic Calibrated)": {
+      "operational_precision_mean": 0.8358,
+      "operational_precision_std": 0.1951,
+      "ci_95_empirical": [
+        0.5,
+        1.0
+      ],
+      "operational_recall_mean": 0.2405,
+      "lift_over_base_rate": 0.1308
+    }
+  }
+}

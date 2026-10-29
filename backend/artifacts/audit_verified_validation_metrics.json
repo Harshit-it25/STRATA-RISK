@@ -1,0 +1,164 @@
+{
+  "validation_status": "completed",
+  "dataset_type": "real",
+  "dataset_name": "Chicago Crimes (ijzp-q8t2) - Proxy Dataset",
+  "real_data_validation_status": "completed",
+  "usable_records": 24815,
+  "total_records_ingested": 25000,
+  "date_range": {
+    "start": "2026-08-01",
+    "end": "2026-09-30",
+    "duration_days": 60
+  },
+  "evaluation_period": "Chronological Holdout (n=3440)",
+  "data_quality_warnings": [],
+  "brier_score": 0.1869,
+  "brier_target": "< 0.150",
+  "brier_status": "ACCEPTABLE",
+  "roc_auc": 0.7211,
+  "roc_auc_status": "ADEQUATE",
+  "pr_auc": 0.8447,
+  "expected_calibration_error": 0.0443,
+  "calibration_slope": 0.724,
+  "log_loss": 0.5565,
+  "precision": 0.7706,
+  "recall": 0.8507,
+  "f1_score": 0.8087,
+  "precision_top_20pct": 0.8968,
+  "recall_top_20pct": 0.2544,
+  "demographic_parity": 0.59,
+  "disparate_impact_ratio": 0.359,
+  "personal_identity_ingestion": "0.00%",
+  "empirical_uncertainty": {
+    "residual_std": 0.4373,
+    "empirical_uncertainty_band": "\u00b18.6 pts (95% empirical CI)",
+    "uncertainty_points": 8.6,
+    "methodology": "Empirical validation residual standard error"
+  },
+  "model_version": "v4.2.1-catboost-calibrated",
+  "sample_count": 3440,
+  "baseline_comparison": {
+    "candidate_catboost": {
+      "brier_score": 0.1869,
+      "roc_auc": 0.7211,
+      "pr_auc": 0.8447,
+      "log_loss": 0.5565,
+      "calibration_slope": 0.724,
+      "ece": 0.0443,
+      "precision": 0.7706,
+      "recall": 0.8507,
+      "f1": 0.8087,
+      "precision_top_20pct": 0.8968,
+      "recall_top_20pct": 0.2544,
+      "sample_count": 3440,
+      "positive_count": 2425,
+      "base_rate": 0.7049,
+      "mae": 4.5003,
+      "rmse": 4.8638
+    },
+    "historical_spatial_baseline": {
+      "brier_score": 0.1926,
+      "roc_auc": 0.67,
+      "pr_auc": 0.8032,
+      "log_loss": 0.5701,
+      "calibration_slope": 1.0234,
+      "ece": 0.0228,
+      "precision": 0.7316,
+      "recall": 0.934,
+      "f1": 0.8205,
+      "precision_top_20pct": 0.8474,
+      "recall_top_20pct": 0.2404,
+      "sample_count": 3440,
+      "positive_count": 2425,
+      "base_rate": 0.7049
+    },
+    "temporal_cyclical_baseline": {
+      "brier_score": 0.1949,
+      "roc_auc": 0.6535,
+      "pr_auc": 0.8021,
+      "log_loss": 0.5749,
+      "calibration_slope": 0.9133,
+      "ece": 0.0269,
+      "precision": 0.7399,
+      "recall": 0.9093,
+      "f1": 0.8159,
+      "precision_top_20pct": 0.8605,
+      "recall_top_20pct": 0.2441,
+      "sample_count": 3440,
+      "positive_count": 2425,
+      "base_rate": 0.7049
+    }
+  },
+  "stratified_evaluations": {
+    "by_sector": {
+      "zone-02": {
+        "sample_count": 688,
+        "positive_count": 465,
+        "candidate_brier": 0.1885,
+        "candidate_auc": 0.7383,
+        "spatial_brier": 0.2064,
+        "temporal_brier": 0.2126
+      },
+      "zone-04": {
+        "sample_count": 688,
+        "positive_count": 486,
+        "candidate_brier": 0.1866,
+        "candidate_auc": 0.7198,
+        "spatial_brier": 0.1933,
+        "temporal_brier": 0.1867
+      },
+      "zone-07": {
+        "sample_count": 688,
+        "positive_count": 528,
+        "candidate_brier": 0.1632,
+        "candidate_auc": 0.6988,
+        "spatial_brier": 0.171,
+        "temporal_brier": 0.1738
+      },
+      "zone-09": {
+        "sample_count": 688,
+        "positive_count": 502,
+        "candidate_brier": 0.1873,
+        "candidate_auc": 0.6535,
+        "spatial_brier": 0.1946,
+        "temporal_brier": 0.1936
+      },
+      "zone-12": {
+        "sample_count": 688,
+        "positive_count": 444,
+        "candidate_brier": 0.2086,
+        "candidate_auc": 0.7547,
+        "spatial_brier": 0.1975,
+        "temporal_brier": 0.2076
+      }
+    },
+    "by_time_period": {
+      "Daytime (08:00-16:00)": {
+        "sample_count": 1720,
+        "candidate_brier": 0.1617,
+        "candidate_auc": 0.7016
+      },
+      "Night (20:00-04:00)": {
+        "sample_count": 1720,
+        "candidate_brier": 0.212,
+        "candidate_auc": 0.7006
+      }
+    },
+    "by_data_sufficiency": {
+      "Adequate Telemetry Cells": {
+        "sample_count": 2064,
+        "base_rate": 0.7166,
+        "candidate_brier": 0.1806,
+        "candidate_auc": 0.7169
+      },
+      "Sparse Telemetry Cells": {
+        "sample_count": 1376,
+        "base_rate": 0.6875,
+        "candidate_brier": 0.1963,
+        "candidate_auc": 0.7267
+      }
+    }
+  },
+  "last_calibration_date": "Live Chronological Benchmark",
+  "audited_by": "Strata Risk Model Validation Engine"
+}

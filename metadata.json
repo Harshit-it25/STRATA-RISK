@@ -1,0 +1,6 @@
+{
+  "name": "Strata Risk",
+  "description": "Spatio-temporal incident pattern simulation, risk forecasting, and civic logistical analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

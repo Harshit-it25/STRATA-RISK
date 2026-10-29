@@ -1,0 +1,30 @@
+{
+  "model_type": "CatBoostClassifier",
+  "iterations": 128,
+  "feature_columns": [
+    "sector_id",
+    "zone_key",
+    "hour_of_day",
+    "day_of_week",
+    "is_weekend",
+    "sin_hour",
+    "cos_hour",
+    "sin_day",
+    "cos_day",
+    "lag_1_count",
+    "lag_2_count",
+    "lag_6_count",
+    "lag_42_count",
+    "rolling_24h_sum",
+    "rolling_7d_mean",
+    "sector_other_zones_count",
+    "empirical_cell_rate"
+  ],
+  "cat_features": [
+    "sector_id",
+    "zone_key"
+  ],
+  "train_samples": 11120,
+  "val_samples": 2560,
+  "random_seed": 42
+}

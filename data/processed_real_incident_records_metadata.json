@@ -1,0 +1,41 @@
+{
+  "dataset_type": "real",
+  "dataset_name": "Chicago Police Department Incident Feed (Proxy)",
+  "source_file": "data/processed_chicago_crimes.csv",
+  "processed_file": "data/processed_real_incident_records.csv",
+  "ingested_at": "2026-10-09T08:39:42.234791+00:00",
+  "raw_records": 24815,
+  "usable_records": 24815,
+  "dropped_records": 0,
+  "quality_audit": {
+    "total_raw_records": 24815,
+    "usable_records": 24815,
+    "dropped_records": 0,
+    "quality_score_pct": 100,
+    "date_range": {
+      "start": "2023-01-01 00:00:00",
+      "end": "2023-05-23 19:06:00",
+      "duration_days": 142
+    },
+    "missing_timestamps": 0,
+    "missing_coordinates": 0,
+    "out_of_bounds_coordinates": 0,
+    "null_island_coordinates": 0,
+    "duplicate_records": 0,
+    "data_sufficiency": "SUFFICIENT",
+    "warnings": []
+  },
+  "sectors_represented": [
+    "zone-04",
+    "zone-09",
+    "zone-07",
+    "zone-12",
+    "zone-02"
+  ],
+  "zones_represented": [
+    "riverside",
+    "market",
+    "central",
+    "east"
+  ]
+}

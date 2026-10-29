@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production & Build outputs
+dist/
+build/
+coverage/
+.next/
+out/
+
+# Python cache & test artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+catboost_info/
+
+# Environment files & Secrets
+.env
+.env.*
+*.env
+!.env.example
+*.pem
+*.key
+*.pkcs*
+*.crt
+*.pfx
+*.p12
+secrets/
+credentials.json
+token.json
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.vscode/
+.idea/
+
+# Temporary test data
+data/temp_test*
+data/test_raw_cache/
+*.tmp
